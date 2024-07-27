@@ -1,6 +1,7 @@
 import { FaBars } from 'react-icons/fa6'
 import  Logo from '../assets/kelisLogo.jpg'
 import {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
   const [nav , setNav] =useState(false);
@@ -23,8 +24,8 @@ export const Navbar = () => {
         <a href="#how" className="text-white nav_link">How It Works</a>
         <a href="#service" className="text-white nav_link">Services</a>
         <a href="#price" className="text-white nav_link">Pricing</a>
-        <a href="/contact" className="text-white nav_link">Contact</a>
-        <a href="/blog" className="text-white nav_link">Blog</a>
+        <Link to="/contact" className="text-white nav_link">Contact</Link>
+        <Link to="/blog" className="text-white nav_link">Blog</Link>
       </nav>
     {
       nav && (
@@ -34,8 +35,8 @@ export const Navbar = () => {
         <a href="#how" className="text-white nav_link">How It Works</a>
         <a href="#service" className="text-white nav_link">Services</a>
         <a href="#price" className="text-white nav_link">Pricing</a>
-        <a href="/contact" className="text-white nav_link">Contact</a>
-        <a href="/blog" className="text-white nav_link">Blog</a>
+        <Link to="/contact" className="text-white nav_link">Contact</Link>
+        <Link to="/blog" className="text-white nav_link">Blog</Link>
       </nav>
       )
     }
