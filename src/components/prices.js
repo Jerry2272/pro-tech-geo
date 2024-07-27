@@ -1,8 +1,8 @@
 import taskService from '../assets/taskService.jpg'
 import cancelFee from '../assets/cancelFee.jpg'
-import premuim from '../assets/prem.jpg'
-import priority from '../assets/priority.jpg'
-import gen from '../assets/generalHour.jpg'
+import premuim from '../assets/pre.jpg'
+import priority from '../assets/prior.jpg'
+import gen from '../assets/generl.jpg'
 
 
 export const prices = [

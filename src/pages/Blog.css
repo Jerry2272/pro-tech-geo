@@ -1,0 +1,146 @@
+.blog-page {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  }
+  
+  .blog-header {
+    background: url('hero-image-url') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    padding: 90px 20px;
+  }
+  
+  .hero-section h2 {
+    font-size: 32px;
+  }
+  
+  .hero-section p {
+    font-size: 22px;
+  }
+  .blog-content {
+    padding: 20px;
+  }
+  
+  .intro-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .recent-posts h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+ 
+  .post-preview img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .post-preview h3 {
+    font-size: 20px;
+    margin: 15px;
+  }
+  
+  .post-preview .post-date {
+    font-size: 14px;
+    color: #020617;
+    margin: 0 15px 10px;
+  }
+  
+  .post-preview p {
+    font-size: 16px;
+    margin: 0 15px 20px;
+  }
+  
+  .read-more {
+    display: block;
+    margin: 0 15px 15px;
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  
+  .sidebar {
+    margin: 40px 0;
+  }
+  
+  .sidebar h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .categories li {
+    margin-bottom: 10px;
+  }
+  
+  .categories li a {
+    font-size: 18px;
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .categories li a:hover {
+    text-decoration: underline;
+  }
+  
+  .newsletter-section {
+    margin: 40px 0;
+    text-align: center;
+  }
+  .services{
+    position: relative;
+  }
+  .services::before{
+    position: absolute;
+    content: '';
+    background-color: #020617;
+    width: 80%;
+    inset: 0;
+    height: 2px;
+    left: 4em;
+    top: 1em;
+  }
+  .newsletter-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-section input {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px
+  }
+
+
+  @media(min-width: 992px) {
+    .posts-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      
+      .post-preview {
+        width: calc(33.333% - 20px);
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+      
+  }

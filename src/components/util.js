@@ -1,9 +1,9 @@
-import bg1 from '../assets/combgImg.jpg';
-import bg2 from '../assets/ab.jpg'
-import bg3 from '../assets/compImg.jpg';
-import bg4 from '../assets/companyBg.jpg';
-import bg5 from '../assets/heroBg.jpg';
-import bg6 from '../assets/heroImg.jpg'
+import bg1 from '../assets/hBg.jpg';
+import bg2 from '../assets/hBg.jpg'
+import bg3 from '../assets/hBg.jpg';
+import bg4 from '../assets/hBg.jpg';
+import bg5 from '../assets/hBg.jpg';
+import bg6 from '../assets/hBg.jpg'
 
 export const HeroSlide = [
     {

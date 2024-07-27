@@ -32,7 +32,9 @@ export const Contact = () => {
                             <span>Send Us a Message</span>
                             <FaEnvelopeOpen />
                         </h5>
-                        <p>service@Kelisconciergeng.com</p>
+                        <ul>
+                            <li>kelisconciergeservices@gmail.com</li>
+                        </ul>
                     </div>
                     <div className="gridContent p-4 m-2 shadow bg-slate-200">
                         <h5 className="font-bold py-4 uppercase text-slate-950 flex justify-center items-center gap-3
@@ -41,11 +43,11 @@ export const Contact = () => {
                             <span>Our Office Location</span>
                             <FaLocationArrow />
                         </h5>
-                        <p>
-                            Port Harcourt.
-                        </p>
-                        <p>River State</p>
-                        <p>Nigeria</p>
+                        <ul>
+                            <li>Port Harcourt</li>
+                            <li>River State</li>
+                            <li>Nigeria</li>
+                        </ul>
                     </div>
                 </div>
             </section>

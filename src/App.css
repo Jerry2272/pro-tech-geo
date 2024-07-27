@@ -14,14 +14,10 @@
   max-width: 100%;
   width: 100%;
 }
-h1, h2{
-  font-family: "Playfair Display SC", serif;
+h1, h2 , h3{
   font-weight: 400;
   font-style: normal;
-}
-h3{
   font-family: "Montserrat", sans-serif;
-  font-style: normal;
 }
 p{
   font-family: "Lato", sans-serif;
@@ -56,6 +52,34 @@ p{
 /* hero section ending   */
 
 
+/* how it works  */
+.howItwork .textArea{
+  background: linear-gradient( rgba(0, 8, 65 , 0.78)  , rgba(0, 8, 65 , 1) ) , url('../src/assets/howItwork.avif')  ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+/* how it works ending */
+.note{
+  /* transform: translateY(5em); */
+  position: relative;
+  z-index: 1;
+}
+.note ul li , .note p{
+  position: relative;
+  z-index: 999;
+  color: #fff;
+}
+.noteOverlay{
+  position: absolute;
+  inset: 0;
+  top: -1em;
+  bottom: 2em;
+  min-width: 50%;
+  left: 2em;
+  background-color: #020617;
+}
 /* pricing and rate  */
 .price .gridContent{
   position: relative;
@@ -157,6 +181,20 @@ button.slick-arrow.slick-prev{
   border-bottom: 1px solid white;
   padding: 10px;
 }
+
+
+/* article page  */
+.article-card{
+  background-color: #020617;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  margin: 20px;
+  padding: 60px;
+}
+/* article page ending */
 
 @media(min-width: 992px) {
   .service .slick-list{
