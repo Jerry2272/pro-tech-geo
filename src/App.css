@@ -42,7 +42,6 @@ p{
 
 
 /* hero section   */
-
 .hero{
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
@@ -202,7 +201,7 @@ button.slick-arrow.slick-prev{
     margin-top: 3em;
   }
   .service .slick-list .gridContent{
-    border: 5px solid #020617;
+    /* border: 5px solid #020617; */
     padding: 20px;
   }
 }

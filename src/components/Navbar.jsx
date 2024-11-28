@@ -1,5 +1,5 @@
 import { FaBars } from 'react-icons/fa6'
-import  Logo from '../assets/kelisLogo.jpg'
+// import  Logo from '../assets/kelisLogo.jpg'
 import {useState} from 'react'
 import { Link } from 'react-router-dom';
 
@@ -12,13 +12,13 @@ export const Navbar = () => {
 
   return (
     <header className='header'>
-    <div className="bg-slate-950 text-center flex lg:justify-center items-center justify-between px-8 py-4 lg:px-6 ">
-   <a href="/">
-   <img src={Logo} className='h-[auto] lg:w-[auto] w-[50%]'  alt="logo" />
-   </a>
+    <div className="text-center flex lg:justify-center items-center justify-between px-8 py-4 lg:px-6 ">
+   {/* <a href="/">
+   <img src={Logo} className='h-[auto] lg:w-[auto] lg:fixed right-0 z-20 w-[50%]'  alt="logo" />
+   </a> */}
     <FaBars  onClick={displayNav}   className='block lg:hidden text-white text-2xl bg-transparent' />
     </div>
-    <nav className="lg:flex gap-[40px] justify-center flex-col lg:flex-row bg-slate-800 py-3 text-white hidden" >
+    <nav className="lg:flex gap-[40px] justify-center flex-row lg:flex-row bg-slate-800 py-3 text-white hidden  z-50 w-[50%]" >
         <a href="/" className="text-white nav_link">Home</a>
         <a href="#about" className="text-white nav_link">About Us</a>
         <a href="#how" className="text-white nav_link">How It Works</a>
