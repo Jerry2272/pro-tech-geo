@@ -113,14 +113,14 @@ function App() {
     {/* hero section ending */}
 
     {/* about section  */}
-    <section className="about lg:grid grid-cols-2 gap-16 lg:my-[6em] my-[3em] px-4 lg:h-[100vh]" id='about'>
+    <section className="about lg:grid grid-cols-2 gap-16 lg:my-[6em] my-[2em] px-4 lg:h-[100vh]" id='about'>
       <div className="imgContainer lg:w-[110%] lg:pt-[2em] pl-0 lg:ml-[-20px] flex items-center" data-aos="zoom-in" data-aos-delay="300">
         <img src={Ab} className='w-full h-full' alt="" />
       </div>
       <div className="textArea flex items-center justify-self-start pl-4">
-        <div className='lg:px-1 pr-3'>
+        <div className='lg:px-1 lg:pr-3'>
           <h2 className='text-2xl lg:text-4xl font-[400] lg:font-[800] text-left lg:pl-6 py-4 text-green uppercase pt-[1em]' data-aos="fade-up">About GPBF</h2>
-          <p className='text-left lg:py-3 mb-8 lg:px-6 py-4 font-[600] text-2xl' data-aos="zoom-in">
+          <p className='text-left lg:py-3 mb-4 lg:px-6 py-4 font-[600] text-2xl' data-aos="zoom-in">
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis doloribus labore asperiores sequi ducimus non quod sed, nulla provident perspiciatis aut ut accusantium sint maxime quidem tempora eaque fugiat, commodi dignissimos? Amet incidunt ut architecto officia illo corporis. Quibusdam quod animi unde porro nostrum sint? 
           </p>
           <button className='lg:w-[30%] lg:ml-6 bg-green text-white'><a href="#mission" className='text-white'>Learn More</a></button>
@@ -130,8 +130,8 @@ function App() {
     {/* about section ending */}
 
       {/* mission section  */}
-  <section className="mission lg:grid grid-cols-2 gap-1 mt-[5em] lg:pt-[3em] bg-green-950 py-10 items-center lg:mr-[4em] relative lg:pl-[4em] pb-10 lg:h-[55vh]" id='vision'>
-      <div className='textArea flex justify-center lg:px-3 p-4 leading-7 flex-col'>
+  <section className="mission lg:grid grid-cols-2 gap-1 mt-[1em] lg:pt-[3em] bg-green-950 py-10 items-center lg:mr-[4em] relative lg:pl-[4em] pb-10 lg:h-[55vh]" id='vision'>
+      <div className='textArea flex justify-center lg:px-3 p-4 leading-7 flex-col pl-[40px] '>
         <h2 className='lg:text-4xl text-3xl lg:font-[800] font-[300] text-left lg:px-6 text-white uppercase '> Our Vision</h2>
         <p className='text-left py-6 lg:px-2 px-1 text-gray-300 lg:text-[20px] font-[500]' data-aos="fade-up" data-aos-delay="400">
          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente accusamus cumque dignissimos aut magni qui saepe dolorem consequuntur illum minima?
@@ -145,24 +145,24 @@ function App() {
     {/* mission section ending */}
 
     {/* misson section  */}
-    <section className='h-[100vh] lg:mt-[11em] flex flex-col justify-center items-center'>
+    <section className='lg:h-[100vh] lg:mt-[11em] flex flex-col justify-center items-center mt-[3em]'>
       <h2 className='lg:text-4xl text-3xl lg:font-[800] font-[300] text-left lg:px-6  uppercase my-5'>Our Mission</h2>
       <p>Loving radically, living generously</p>
 
-      <div className="grid grid-cols-3  lg:p-[6em] lg:pt-[4em]">
-        <div className='m-[1em] bg-green-950 text-white p-4 h-[70vh]'>
+      <div className="grid lg:grid-cols-3  lg:p-[6em] lg:pt-[4em]">
+        <div className='m-[1em] bg-green-950 text-white p-4 lg:h-[70vh]'>
           <h2 className='font-bold text-2xl my-8'>watching Jesus do the extraordinary.</h2>
           <h6>
           At the core of everything we do, our commitment to radical love sets us apart. We believe in embracing all individuals just as they are—with open arms and without judgement. This love motivates us to serve, support, and lift each other up in all walks of life.
           </h6>
         </div>
-        <div className='m-[1em] bg-green-950 text-white p-4 h-[70vh]'>
+        <div className='m-[1em] bg-green-950 text-white p-4 lg:h-[70vh]'>
           <h2 className='font-bold text-2xl my-8'>Live Generously</h2>
           <h6>
           Generosity is not just about giving; its about living. We make it our mission to live generously in every interaction, whether it’s with time, energy, or resources.
           </h6>
         </div>
-        <div className='m-[1em] bg-green-950 text-white p-4 h-[70vh]'>
+        <div className='m-[1em] bg-green-950 text-white p-4 lg:h-[70vh]'>
           <h2 className='font-bold text-2xl my-8'>Watch the Extraordinary</h2>
           <h6>
           When we come together in faith, extraordinary things happen. We are a testament to the power of Jesus and the incredible acts that follow when we put our trust in Him. Witnessing miracles, big and small, is part of our journey.
