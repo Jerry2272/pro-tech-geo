@@ -1,51 +1,66 @@
-import { FaBars } from 'react-icons/fa6'
-import  Logo from '../assets/pgl-logo.png'
-import {useState} from 'react'
+import { FaBars } from 'react-icons/fa6';
+import Logo from '../assets/pgl-logo.png';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
-  const [nav , setNav] =useState(false);
+  const [nav, setNav] = useState(false);
 
-  const displayNav = () =>{
-      setNav(!nav)
-  }
+  const displayNav = () => {
+    setNav(!nav);
+  };
+
   return (
-    <header className='md:flex justify-between items-center h-[96px] bg-white px-[100px] py-[52px]   hidden'>
-    <span className=" ">
-   <a href="/">
-   <img src={Logo} className=''  alt="logo" />
-   </a>
-    <FaBars  onClick={displayNav}   className='block md:hidden text-white text-2xl bg-transparent' />
-    </span>
-    <nav className=" flex items-center gap-[30px]" >
-        <a href="/" className="text-activeColor text-[16px] font-[600] font-manRope">Home</a>
-        <a href="#about" className="text-navColor text-[16px] font-[400] font-manRope">About Us</a>
-        <a href="#service" className="text-navColor text-[16px] font-[400] font-manRope">Our Services</a>
-        <Link to="/contact" className="bg-activeColor text-white text-[16px] font-[400] font-manRope" 
-        style={{
-          padding: '10px 12px 10px 12px',
-          borderRadius: '8px',
-          border: '0',
-        }}
-        >
-        Contact Us 
+    <header className='md:flex justify-between items-center lg:h-[96px] h-[80px] bg-white px-[20px] py-[20px] md:px-[100px] md:py-[52px] shadow-lg transition-all ease-in-out'>
+      <span className='flex items-center'>
+        <Link to='/'>
+          <img src={Logo} className='w-[120px] md:w-[150px]' alt='logo' />
         </Link>
-       
-      </nav>
-    {
-      nav && (
-        <nav className="flex gap-[20px] flex-col lg:flex-row bg-slate-950 text-white navMenu" >
-        <a href="/" className="text-white nav_link">Home</a>
-        <a href="#about" className="text-white nav_link">About Us</a>
-        <a href="#how" className="text-white nav_link">How It Works</a>
-        <a href="#service" className="text-white nav_link">Services</a>
-        <a href="#price" className="text-white nav_link">Pricing</a>
-        <Link to="/contact" className="text-white nav_link">Contact</Link>
-        <Link to="/blog" className="text-white nav_link">Blog</Link>
-      </nav>
-      )
-    }
+        <FaBars
+          onClick={displayNav}
+          className='block md:hidden text-2xl text-activeColor cursor-pointer ml-auto'
+        />
+      </span>
 
+      {/* Navbar for Desktop */}
+      <nav className='hidden md:flex items-center gap-[30px]'>
+        <Link to='/' className='text-activeColor text-[16px] font-[600] font-manRope hover:text-navColor transition-all'>
+          Home
+        </Link>
+        <Link to='/about' className='text-navColor text-[16px] font-[400] font-manRope hover:text-activeColor transition-all'>
+          About Us
+        </Link>
+        <Link to='/geo' className='text-navColor text-[16px] font-[400] font-manRope hover:text-activeColor transition-all'>
+          Our Services
+        </Link>
+        <Link
+          to='/contact'
+          className='bg-activeColor text-white text-[16px] font-[400] font-manRope px-[12px] py-[10px] rounded-[8px] hover:bg-navColor transition-all'
+        >
+          Contact Us
+        </Link>
+      </nav>
+
+      {/* Mobile Navbar */}
+      {nav && (
+        <nav className='md:hidden flex flex-col gap-[20px] bg-white text-activeColor p-[20px] absolute top-[80px] left-0 w-full z-[999] h-[60vh] items-center justify-center transition-all ease-in-out duration-500'>
+          <Link to='/' className='text-activeColor text-[16px] font-[600] font-manRope hover:text-navColor transition-all'>
+            Home
+          </Link>
+          <Link to='/about' className='text-navColor text-[16px] font-[400] font-manRope hover:text-activeColor transition-all'>
+            About Us
+          </Link>
+          <Link to='/geo' className='text-navColor text-[16px] font-[400] font-manRope hover:text-activeColor transition-all'>
+            Our Services
+          </Link>
+          <Link
+            to='/contact'
+            className='bg-activeColor text-white text-[16px] font-[400] font-manRope px-[12px] py-[10px] rounded-[8px] hover:bg-navColor transition-all'
+          >
+            Contact Us
+          </Link>
+        </nav>
+      )}
     </header>
-  )
-}
+  );
+};

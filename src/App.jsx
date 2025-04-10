@@ -1,18 +1,21 @@
 import { useEffect } from 'react';
 import './App.css';
+import { FiChevronRight } from "react-icons/fi";
+import { FiChevronLeft } from "react-icons/fi";
 // import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import Carousel from 'react-slick';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { clientLogo, HeroSlide, Services } from './components/util';
+import { HeroSlide, Services } from './components/util';
 import AboutImg from '../src/assets/aboutP.png';
 
 import 'aos/dist/aos.css'; // AOS styles
 import AOS from 'aos'
 import { Navbar } from './components/Navbar';
 import { Link } from 'react-router-dom';
+import Client from './molecules/Client';
 
 
 function App() {
@@ -57,7 +60,7 @@ function App() {
     autoplay: true,
     arrows: false
   };
-  
+
 
   return (
     <>
@@ -69,7 +72,7 @@ function App() {
           <div key={i} 
           >
             <section
-              className="md:h-[85vh] h-[70vh] flex text-left md:pl-[100px] items-center  pl-[10px]"
+              className="md:h-[85vh] h-[80vh] flex text-left md:pl-[100px] items-center  pl-[10px]"
               id="home"
               style={{
                 backgroundImage: `linear-gradient(270.47deg, rgba(2, 1, 1, 0) 20.32%, rgba(2, 1, 1, 0.51) 50.96%, #020101 122.45%), url(${slide.img})`,
@@ -89,7 +92,7 @@ function App() {
                    {slide.description}
                   </h6>
                  <div className="flex gap-[24px]">
-                 <Link to="/contact" className="bg-white text-navColor text-[16px] font-[400] font-manRope" 
+                 <Link to="/geo" className="bg-white text-navColor text-[16px] font-[400] font-manRope" 
         style={{
           padding: '12px 16px 12px 16px',
           borderRadius: '8px',
@@ -131,7 +134,7 @@ function App() {
           <p className=" text-[18px] font-[400] text-textColor font-manRope leading-[28px] mb-[40px]" data-aos="zoom-out">
           Our expertise spans Survey & Geomatics Services, Hydrographic & Hydrometric Surveys, Geographic Information Systems (GIS), and Geodetic Resource Data tailored for the mining, petroleum, exploration, and telecommunication sectors. We also specialize in geotechnical investigations, environmental impact assessments, dredging support services, and civil construction projects—ensuring seamless integration of our solutions into real-world applications.
           </p>
-          <Link to="/contact" className="bg-activeColor text-white text-[16px] font-[400] font-manRope" 
+          <Link to="/about" className="bg-activeColor text-white text-[16px] font-[400] font-manRope" 
         style={{
           padding: '12px 16px 12px 16px',
           borderRadius: '8px',
@@ -147,30 +150,58 @@ function App() {
 
     {/* services section  */}
     <section className="service pt-[100px] md:mb-[200px] md:pl-[100px] md:pr-[0px] px-4 overflow-hidden" id="service">
-  <h2 className="text-[38px] font-[700] text-activeColor font-spaceGrotesk mb-[40px]">Our Services</h2>
+ <div className="flex md:pr-[3em]">
+ <h2 className="text-[38px] font-[700] text-activeColor font-spaceGrotesk mb-[40px]">Our Services</h2>
+<div className="flex ml-auto gap-[20px]">
+<button
+           
+           className="rounded-[4px] flex justify-center items-center"
+           style={{
+            color: '#323232',
+            width: '42px',
+height: '40px',
+background: '#E3E3E333'
+           }}
+         >
+         <FiChevronLeft size={24} />
+         </button>
+         <button
+           className="rounded-[4px] flex justify-center items-center"
+           style={{
+            color: '#323232',
+            width: '42px',
+height: '40px',
+background: '#E3E3E333'
+           }}
+         >
+            <FiChevronRight size={24} />
 
-  <Carousel {...settings}>
+         </button>
+</div>
+</div>
+
+  <Carousel {...settings} className=' overflow-hidden'>
     {Services.map((service, i) => (
       <div key={i} className="relative h-[438px] w-[350px] m-[10px] rounded-[12px] overflow-hidden shadow-lg group group-hover:mx-5 group-hover:overflow-hidden"   >
         
         {/* Service Image (Scales on Hover) */}
-        <img 
+      <a href={service.link} >
+      <img 
           src={service.serviceImg} 
           alt={service.text} 
           className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110 mx-5 rounded-[12px] overflow-hidden"
         />
+        </a>
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 to-transparent bg-[#E3E3E3] opacity-5 rounded-[12px] mx-5 group-hover:scale-110 w-[100%] duration-500"></div>
 
         {/* Text Content */}
-        <div className="absolute bottom-0 left-0 w-full text-left text-white font-[300] text-[32px] pl-[14px] rounded-[12px] md:ml-5 pb-5 group-hover:ml-0 duration-500"
+        <div className="absolute bottom-0 left-0 w-full text-left text-white font-[300] text-[32px] pl-[14px] rounded-[12px] md:ml-5 pb-5  duration-500"
         style={{
         background: 'linear-gradient(1.98deg, rgba(2, 1, 1, 0.5) 66.76%, rgba(2, 1, 1, 0) 93.65%)',
         backdropFilter: 'blur(6px)'
         }}
-        >
-          <h2>{service.text}</h2>
+        >     
+          <h2 className='text-[32px] font-[400] text-white font-manRope'>{service.text}</h2>
         </div>
       </div>
     ))}
@@ -179,20 +210,9 @@ function App() {
 
 
     {/* services section ending */}
-
+<Client />
 {/* client Section */}
-    <section className='md:pl-[100px] md:mb-[100px] p-[40px] pl-[10px]'>
-    <h2 className=' text-[38px] font-[700] text-activeColor md:mb-[40px] font-spaceGrotesk mb-[20px] ' data-aos="fade-up">Our Clients</h2>
-      <div className='flex'>
-    {
-      clientLogo.map((logo, i) =>(
-<div key={i} >
-          <img src={logo.logo} alt="" />
-        </div>
-      ))
-    }
-        </div>
-    </section>
+
     {/* client Section ending*/}
     <Footer />
   </main>

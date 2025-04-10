@@ -5,3 +5,83 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.aboutBg {
+    background: url('../src/assets/aboutBg.png');
+}
+.geoBg{
+    background: url('../src/assets/geoBg.png')
+}
+
+.slick-slide {
+   overflow: hidden;
+   border-radius: 8px;
+}
+.slick-slide   img{
+    width: 100%;
+   border-radius: 8px;
+}
+
+.mission_vision:nth-child(2) {
+    background-color: #ED2625;
+    width: 327px;
+height: 381px;
+border-radius: 24px;
+  margin: 0
+}
+.mission_vision:nth-child(1) {
+    background-color: #020101;
+    width: 327px;
+height: 381px;
+border-radius: 24px;
+  margin: 0
+}
+.mission_vision:nth-child(1) h2 span {
+color: #ED2625;
+}
+.mission_vision:nth-child(3) {
+    grid-row: span 2;
+    width: 400px;
+    padding: 0 0;
+    margin: 0
+}
+.mission_vision:nth-child(3) img{
+    grid-row: span 2;
+    width: 100%;
+    padding: 0 0;
+    object-fit: cover;
+    object-position: center;
+    scale: 1.1;
+}
+
+.otherService > div:nth-child(1) {
+    grid-row: span 2; /* Makes the first item span 2 rows */
+    grid-columns: span 2;
+}
+
+.otherService > div:nth-child(2) {
+    width: 523px;
+    border-radius: 22.71px;
+    grid-columns: span 3;
+}
+
+.otherService > div:nth-child(3) {
+    width: 225px;
+    height: 215px;
+    border-radius: 22.41px;
+    margin-left: auto;
+}.otherService > div:nth-child(4) {
+    height: 312px;
+}
+.otherService > div:nth-child(5) {
+    height: 312px;
+}
+
+/* General arrow style */
+/*  */
