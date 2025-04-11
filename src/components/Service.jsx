@@ -48,9 +48,35 @@ export const Service = () => {
 
   return (
     <section className="service pt-[60px] md:mb-[200px] px-4 overflow-hidden" id="service">
-      <h2 className="text-[38px] font-bold text-activeColor font-spaceGrotesk mb-[40px]">
-        Other Services
-      </h2>
+      <div className="flex md:pr-[3em]">
+       <h2 className="text-[38px] font-bold text-activeColor font-spaceGrotesk mb-[40px]">Other Services</h2>
+      <div className="flex ml-auto gap-[20px]">
+      <button
+                 
+                 className="rounded-[4px] flex justify-center items-center"
+                 style={{
+                  color: '#323232',
+                  width: '42px',
+      height: '40px',
+      background: '#E3E3E333'
+                 }}
+               >
+               <FiChevronLeft size={24} />
+               </button>
+               <button
+                 className="rounded-[4px] flex justify-center items-center"
+                 style={{
+                  color: '#323232',
+                  width: '42px',
+      height: '40px',
+      background: '#E3E3E333'
+                 }}
+               >
+                  <FiChevronRight size={24} />
+      
+               </button>
+      </div>
+      </div>
 
       <Carousel {...settings}>
         {Services.map((service, i) => (
