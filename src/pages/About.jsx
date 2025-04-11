@@ -38,17 +38,17 @@ export const About = () => {
         <Navbar />
 
         {/* hero section  */}
-        <section className="md:h-[440px] lg:h-[440px] aboutBg"  
+        <section className="md:h-[440px] lg:h-[440px] aboutBg  h-[70vh] flex justify-center items-center"  
         >
-            {/* <h2>About Us</h2> */}
+            <h2 className="md:hidden lg:hidden block text-[50px] font-[700] text-white md:mb-[40px] font-manRope">About Us</h2>
         </section>
 
             {/* about section  */}
-            <section className="about md:grid grid-cols-2 justify-center items-center  md:h-auto    overflow-hidden px-[120px]  pt-[60px] pb-[100px]" id='about'>
+            <section className="about md:grid grid-cols-2 justify-center items-center  md:h-auto    overflow-hidden lg:px-[120px] px-4 md:px-[120px]  pt-[60px] md:pb-[100px]" id='about'>
               <div className=" " data-aos="zoom-in" data-aos-delay="300">
                 <img src={AboutImg} className='' alt="" />
               </div>
-              <div className=" ">
+              <div className=" mt-4">
                 <div className=''>
                   <p className=' text-[17px] font-[400] text-textColor font-manRope leading-[28px] mb-[20px]' data-aos="zoom-in">
                   At Protech Geosolution Limited (PGSL), we are committed to delivering precision-driven and innovative geospatial solutions that power industries and infrastructure development. Established in Nigeria and duly incorporated under the Companies and Allied Matters Act on January 9, 2020, we have consistently provided top-tier technical services across multiple sectors, including surveying, geospatial mapping, hydrography, mining, petroleum, and telecommunications
@@ -67,16 +67,16 @@ export const About = () => {
             {/* about section ending */}
 
             {/* vision | Mission  */}
-            <section className='px-[120px] '>
-                <h1 className='md:text-[60px] font-[700] text-navColor md:mb-[40px] font-spaceGrotesk'>Our <span className='text-activeColor '>Mission <br /> </span> 
+            <section className='md:px-[120px] lg:px-[120px] px-1 '>
+                <h1 className='md:text-[60px]  lg:text-[60px]  text-[30px]  font-[700] text-navColor md:mb-[40px] font-spaceGrotes ml-2 mb-2'>Our <span className='text-activeColor '>Mission <br /> </span> 
                 & <span className='text-activeColor '>Vision</span> Statement</h1>
 
-               <div className='grid grid-cols-3'>
+               <div className='grid md:grid-cols-3 grid-cols-1 px-4 justify-center '>
                 {mission.map((item , i ) =>(
                     <div key={i} className='mission_vision px-[24px] pt-[40px]'>
                         <h2 className=' font-[700] text-white md:mb-[40px] font-manRope text-[32px]'>{item.headText} <span className='text-navColor'>{item.headTextspan}</span> </h2>
                         <p className='md:text-[18px] font-[400] text-white md:mb-[40px] font-manRope'>{item.bodyText}</p>
-                        <img src={item.img} className="w-[100%]" alt="" />
+                        <img src={item.img} className="md:w-[100%] object-cover relative" alt="" />
                      </div>   
                 ))}
                </div>

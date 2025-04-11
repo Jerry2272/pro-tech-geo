@@ -1,45 +1,17 @@
-import Img1 from '../assets/hydro2.png'
-import geoImg2 from '../assets/geo2.png'
-import hydroBg from '../assets/surveyBg.png'
+import Img1 from '../assets/hydro2.png';
+import hydroBg from '../assets/surveyBg.png';
 import { useEffect } from 'react';
 import { Navbar } from "../components/Navbar"
 import { Footer } from '../components/Footer';
 import { Service } from '../components/Service';
-import { Services , survey } from '../components/util';
+import {  survey } from '../components/util';
 import { Link } from 'react-router-dom';
 
 import 'aos/dist/aos.css'; // AOS styles
 import AOS from 'aos'
 import Client from '../molecules/Client';
 export const Survey = () => {
-    const settings = {
-        slidesToShow: 3.2,  // Show 3 full slides + a part of the next slide
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: true,
-        infinite: true,
-        centerMode: true,  // Enable centering effect
-        centerPadding: "50px", // Adjust padding to control the visible part of the next slide
-        responsive: [
-          {
-            breakpoint: 568, // For mobile screens
-            settings: {
-              slidesToShow: 1.1, // Show one full slide and a small part of the next
-              slidesToScroll: 1,
-              centerPadding: "20px",
-            },
-          },
-          {
-            breakpoint: 768, // For tablets
-            settings: {
-              slidesToShow: 2.2, // Show two full slides and a part of the next
-              slidesToScroll: 1,
-              centerPadding: "30px",
-            },
-          },
-        ],
-      };
+   
    
         useEffect(() =>{
           AOS.init({
@@ -51,7 +23,7 @@ export const Survey = () => {
     <Navbar />
 
                 {/* hero section  */}
-                <section className="md:h-[440px] lg:h-[440px] relative flex justify-center items-center text-center "
+                <section className="md:h-[440px] lg:h-[440px] relative flex justify-center items-center text-center h-[70vh]  "
                 
                 style={{
                     backgroundImage:  `url(${hydroBg})`,
@@ -60,7 +32,7 @@ export const Survey = () => {
                     backgroundSize: 'cover'
                 }}
         >
-            <h2 className="md:text-[70px] font-[700] text-white font-manRope z-[999] relative"> Survey & Geomatic < br /> Service</h2>
+            <h2 className="md:text-[70px] text-[40px] font-[700] text-white font-manRope z-[999] relative"> Survey & Geomatic < br /> Service</h2>
 
             <div className="absolute" style={{inset: '0', width: '100%' , height: '100%', background: '#0201014D'}}>  </div>  
         </section>
@@ -69,7 +41,7 @@ export const Survey = () => {
                     <section className="flex  items-center  flex-col md:h-auto overflow-hidden pt-[60px] pb-[100px]">
   <div className="md:grid grid-cols-2 justify-center items-center md:h-auto overflow-hidden px-[10px] pt-[60px] mx-auto pb-5">
     <div className="md:ml-[50px]">
-      <div className="">
+      <div className="px-2">
         <p className="text-[17px] font-[400] text-textColor font-manRope leading-[28px] mb-[20px]" data-aos="zoom-in">
         At Protech Geosolution Limited (PGSL), our Survey & Geomatics Services are designed to provide precise spatial data that drives the success of engineering, construction, environmental, and infrastructure projects.
         </p>
@@ -92,23 +64,23 @@ We combine traditional surveying methods with modern technologies such as GPS/GN
       </div>
     </div>
     <div className="flex justify-center items-center" data-aos="zoom-in" data-aos-delay="300">
-      <img src={Img1} className="w-[80%] h-auto" alt="Geosolutions" />
+      <img src={Img1} className="md:w-[80%] h-auto" alt="Geosolutions" />
     </div>
   </div>
 </section>
    {/* about section ending */}
 
                     {/* services images display in grid   */}
-                    <section className="lg:px-[100px] px-[30px]">
+                    <section className="lg:px-[100px] px-[10px] mx-auto">
   <div className="grid lg:grid-cols-3 lg:grid-row-3 gap-4 justify-center mx-auto otherService rounded-[22.79px]">
     {
       survey.map((item, i) => (
-        <div key={i} className="flex justify-center">
+        <div key={i} className="flex justify-center overflow-hidden">
               <Link to={item.link} >
       <img 
           src={item.img} 
           alt={item.text} 
-          className="w-full h-full object-cover transform transition duration-500 group-hover:scale-110 mx-5 rounded-[12px] overflow-hidden"
+          className="w-full  h-full   transform transition duration-500 group-hover:scale-110 mx-5 rounded-[12px] overflow-hidden"
         />
         </Link>
         </div>

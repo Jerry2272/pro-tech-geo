@@ -14,6 +14,10 @@
 
 .aboutBg {
     background: url('../src/assets/aboutBg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
 }
 .geoBg{
     background: url('../src/assets/geoBg.png')
@@ -30,58 +34,97 @@
 
 .mission_vision:nth-child(2) {
     background-color: #ED2625;
-    width: 327px;
-height: 381px;
+    width: 350px;
+height: auto;
+padding: 10px;
 border-radius: 24px;
-  margin: 0
+margin-top: 10px;
+padding: 40px 20px;
 }
 .mission_vision:nth-child(1) {
     background-color: #020101;
-    width: 327px;
-height: 381px;
+    width: 350px;
+height: auto;
 border-radius: 24px;
-  margin: 0
+padding: 40px 20px;
 }
 .mission_vision:nth-child(1) h2 span {
 color: #ED2625;
 }
 .mission_vision:nth-child(3) {
-    grid-row: span 2;
-    width: 400px;
-    padding: 0 0;
-    margin: 0
+    width: 100%;
 }
 .mission_vision:nth-child(3) img{
-    grid-row: span 2;
     width: 100%;
-    padding: 0 0;
-    object-fit: cover;
-    object-position: center;
-    scale: 1.1;
 }
 
-.otherService > div:nth-child(1) {
-    grid-row: span 2; /* Makes the first item span 2 rows */
-    grid-columns: span 2;
+.pro{
+    background:  url('./assets/ProcurementBg.png');
+    background-size: cover;
+    background-position: right ;
 }
 
-.otherService > div:nth-child(2) {
-    width: 523px;
-    border-radius: 22.71px;
-    grid-columns: span 3;
+@media (min-width: 992px) {
+    .pro{
+        background:  url('./assets/ProcurementBg.png');
+    }
+    .mission_vision:nth-child(2) {
+        background-color: #ED2625;
+        width: 327px;
+    height: 381px;
+    border-radius: 24px;
+      margin: 0;
+      padding: 40px 10px;
+    }
+    .mission_vision:nth-child(1) {
+        background-color: #020101;
+        width: 327px;
+    height: 381px;
+    border-radius: 24px;
+      margin: 0;
+      padding: 40px 10px;
+    }
+    .mission_vision:nth-child(1) h2 span {
+    color: #ED2625;
+    }
+    .mission_vision:nth-child(3) {
+        grid-row: span 2;
+        width: 400px;
+        padding: 0 0;
+        margin: 0
+    }
+    .mission_vision:nth-child(3) img{
+        grid-row: span 2;
+        width: 100%;
+        padding: 0 0;
+        object-fit: cover;
+        object-position: center;
+        scale: 1.1;
+    }
+    
+    .otherService > div:nth-child(1) {
+        grid-row: span 2; /* Makes the first item span 2 rows */
+        grid-columns: span 2;
+    }
+    
+    .otherService > div:nth-child(2) {
+        width: 523px;
+        border-radius: 22.71px;
+        grid-columns: span 3;
+    }
+    
+    .otherService > div:nth-child(3) {
+        width: 225px;
+        height: 215px;
+        border-radius: 22.41px;
+        margin-left: auto;
+    }.otherService > div:nth-child(4) {
+        height: 312px;
+    }
+    .otherService > div:nth-child(5) {
+        height: 312px;
+    }
+    
 }
-
-.otherService > div:nth-child(3) {
-    width: 225px;
-    height: 215px;
-    border-radius: 22.41px;
-    margin-left: auto;
-}.otherService > div:nth-child(4) {
-    height: 312px;
-}
-.otherService > div:nth-child(5) {
-    height: 312px;
-}
-
 /* General arrow style */
 /*  */

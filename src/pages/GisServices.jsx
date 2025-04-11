@@ -1,5 +1,5 @@
 import Img1 from '../assets/gisImg.png'
-import gisMappingBg from '../assets/gisMapping.png'
+import gisMappingBg from '../assets/herobg3.png'
 import { useEffect } from 'react';
 import { Navbar } from "../components/Navbar";
 import { Footer } from '../components/Footer';
@@ -20,7 +20,7 @@ export const GisServices = () => {
     <Navbar />
 
                 {/* hero section  */}
-                <section className="md:h-[440px] lg:h-[440px] relative flex justify-center items-center text-center "
+                <section className="md:h-[447px] lg:h-[447px] relative flex justify-center items-center text-center h-[60vh]"
                 
                 style={{
                     backgroundImage:  `url(${gisMappingBg})`,
@@ -29,15 +29,18 @@ export const GisServices = () => {
                     backgroundSize: 'cover'
                 }}
         >
-            {/* <h2 className="md:text-[70px] font-[700] text-white font-manRope z-[999] relative"> ProcureMent</h2> */}
+            <h2 className="md:text-[70px] font-[700] text-white font-manRope z-[999] text-[40px]  relative"> GIS Mapping, <br />
+            Analysis & Modeling </h2>
 
+
+                <div className='bg-[#0201014D] absolute inset-0 '></div>
         </section>
 
                     {/* about section  */}
                     <section className="flex  items-center  flex-col md:h-auto overflow-hidden pt-[60px] pb-[100px]">
   <div className="md:grid grid-cols-2 justify-center items-center md:h-auto overflow-hidden px-[10px] md:px-[40px] pt-[60px] mx-auto pb-5">
     <div className="md:ml-[50px]">
-      <div className="">
+      <div className="pl-4">
         <p className="text-[18px] font-[400] text-textColor font-manRope leading-[28px] mb-[50px]" data-aos="zoom-in">
         At Protech Geosolution Limited (PGSL), we harness the power of Geographic Information Systems (GIS) to transform spatial data into actionable insights. Our GIS Mapping, Analysis & Modeling services support smarter planning, resource management, infrastructure development, and environmental monitoring. 
         </p>
@@ -60,8 +63,8 @@ export const GisServices = () => {
     
       </div>
     </div>
-    <div className="flex justify-center items-center" data-aos="zoom-in" data-aos-delay="300">
-      <img src={Img1} className="w-[80%] h-auto rounded-[24px]" alt="GIS Mapping " />
+    <div className="flex justify-center items-center mt-2" data-aos="zoom-in" data-aos-delay="300">
+      <img src={Img1} className="md:w-[80%] h-auto rounded-[24px]" alt="GIS Mapping " />
     </div>
   </div>
 </section>

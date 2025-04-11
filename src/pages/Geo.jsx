@@ -4,43 +4,11 @@ import { useEffect } from 'react';
 import { Navbar } from "../components/Navbar";
 import { Service } from '../components/Service';
 import { Footer } from '../components/Footer';
-import Carousel from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import { Services } from '../components/util';
 
 import 'aos/dist/aos.css'; // AOS styles
 import AOS from 'aos'
 import Client from '../molecules/Client';
 export const Geo = () => {
-    const settings = {
-        slidesToShow: 3.2,  // Show 3 full slides + a part of the next slide
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: true,
-        infinite: true,
-        centerMode: true,  // Enable centering effect
-        centerPadding: "50px", // Adjust padding to control the visible part of the next slide
-        responsive: [
-          {
-            breakpoint: 568, // For mobile screens
-            settings: {
-              slidesToShow: 1.1, // Show one full slide and a small part of the next
-              slidesToScroll: 1,
-              centerPadding: "20px",
-            },
-          },
-          {
-            breakpoint: 768, // For tablets
-            settings: {
-              slidesToShow: 2.2, // Show two full slides and a part of the next
-              slidesToScroll: 1,
-              centerPadding: "30px",
-            },
-          },
-        ],
-      };
    
         useEffect(() =>{
           AOS.init({
@@ -52,10 +20,10 @@ export const Geo = () => {
     <Navbar />
 
                 {/* hero section  */}
-                <section className="md:h-[440px] lg:h-[440px] geoBg"  
+                <section className="md:h-[440px] lg:h-[440px] geoBg h-[70vh] flex justify-center items-center text-center"  
         >
-            {/* <h2>Geographic & 
-Geodetic Survey</h2> */}
+      <h2 className="md:hidden lg:hidden block text-[40px] font-[700] text-white md:mb-[40px] font-manRope">Geographic & 
+      Geodetic Survey</h2>
         </section>
 
                     {/* about section  */}
@@ -75,17 +43,17 @@ Geodetic Survey</h2> */}
       </div>
     </div>
     <div className="flex justify-center items-center" data-aos="zoom-in" data-aos-delay="300">
-      <img src={geoImg1} className="w-[80%] h-auto" alt="Geosolutions" />
+      <img src={geoImg1} className="md:w-[80%] h-auto" alt="Geosolutions" />
     </div>
   </div>
-    <div className=' flex justify-between lg:gap-[350px]'>
-   <div>
+    <div className=' flex md:flex-row flex-col justify-between lg:gap-[350px] px-[1em] md:px-0 lg:px-0'>
+   <div className=''>
    <h2 className='text-[38px] font-[700] text-activeColor mb-[20px] font-spaceGrotesk '>Our services include:</h2>
-    <ul style={{listStyle: 'inside'}} data-aos="zoom-in" data-aos-delay="300">
+    <ul style={{listStyle: 'inside'}} className='mb-5' data-aos="zoom-in" data-aos-delay="300">
         <li className="text-[18px] text-textColor font-[400] font-manRope leading-[32px]">Control network establishment</li>
         <li className="text-[18px] text-textColor font-[400] font-manRope leading-[32px]">Boundary and cadastral surveys</li>
         <li className="text-[18px] text-textColor font-[400] font-manRope leading-[32px]">Topographic and terrain mapping</li>
-        <li className="text-[18px] text-textColor font-[400] font-manRope leading-[32px]">Geodetic data for mining and oil industries</li>
+        <li className="text-[17px] text-textColor font-[400] font-manRope leading-[32px]">Geodetic data for mining and oil industries</li>
         <li className="text-[18px] text-textColor font-[400] font-manRope leading-[32px]">Survey support for telecom infrastructure</li>
     </ul>
    </div>
@@ -95,7 +63,6 @@ Geodetic Survey</h2> */}
 
                     {/* about section ending */}
 
-      {/* services section  */}
       <Service />
                     <Client />
                     <Footer />

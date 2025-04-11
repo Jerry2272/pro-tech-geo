@@ -1,46 +1,16 @@
 import Img1 from '../assets/hydro2.png'
-import geoImg2 from '../assets/geo2.png'
 import hydroBg from '../assets/hydroBg.png'
 import { useEffect } from 'react';
 import { Navbar } from "../components/Navbar"
 import { Footer } from '../components/Footer';
 import { Service } from '../components/Service';
-import { Services , hyDroservices } from '../components/util';
-import { Link } from 'react-router-dom';    
+import {  hyDroservices } from '../components/util';
 
 import 'aos/dist/aos.css'; // AOS styles
 import AOS from 'aos'
 import Client from '../molecules/Client';
 export const HydroGraphics = () => {
-    const settings = {
-        slidesToShow: 3.2,  // Show 3 full slides + a part of the next slide
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: true,
-        infinite: true,
-        centerMode: true,  // Enable centering effect
-        centerPadding: "50px", // Adjust padding to control the visible part of the next slide
-        responsive: [
-          {
-            breakpoint: 568, // For mobile screens
-            settings: {
-              slidesToShow: 1.1, // Show one full slide and a small part of the next
-              slidesToScroll: 1,
-              centerPadding: "20px",
-            },
-          },
-          {
-            breakpoint: 768, // For tablets
-            settings: {
-              slidesToShow: 2.2, // Show two full slides and a part of the next
-              slidesToScroll: 1,
-              centerPadding: "30px",
-            },
-          },
-        ],
-      };
-   
+ 
         useEffect(() =>{
           AOS.init({
             duration: 1000, // Duration of animations
@@ -51,21 +21,21 @@ export const HydroGraphics = () => {
     <Navbar />
 
                 {/* hero section  */}
-                <section className="md:h-[440px] lg:h-[440px]"
+                <section className="md:h-[440px] lg:h-[440px] h-[60vh] flex justify-center items-center text-center"
                 
                 style={{
                     backgroundImage: `url(${hydroBg})`
                 }}
         >
-            {/* <h2>Geographic & 
-Geodetic Survey</h2> */}
+             <h2 className="md:hidden lg:hidden block text-[40px] font-[700] text-white md:mb-[40px] font-manRope">
+              Hydrographics & Hydrometric Survey</h2>
         </section>
 
                     {/* about section  */}
                     <section className="flex  items-center  flex-col md:h-auto overflow-hidden pt-[60px] pb-[100px]">
   <div className="md:grid grid-cols-2 justify-center items-center md:h-auto overflow-hidden px-[10px] pt-[60px] mx-auto pb-5">
     <div className="md:ml-[50px]">
-      <div className="">
+      <div className="px-2">
         <p className="text-[17px] font-[400] text-textColor font-manRope leading-[28px] mb-[20px]" data-aos="zoom-in">
         At Protech Geosolution Limited (PGSL), we provide advanced Hydrographic and Hydrometric Survey services to support water-related projects across sectors such as construction, oil and gas, dredging, coastal engineering, and environmental management.
         </p>
@@ -87,7 +57,7 @@ Geodetic Survey</h2> */}
       </div>
     </div>
     <div className="flex justify-center items-center" data-aos="zoom-in" data-aos-delay="300">
-      <img src={Img1} className="w-[80%] h-auto" alt="Geosolutions" />
+      <img src={Img1} className="md:w-[80%] h-auto" alt="Geosolutions" />
     </div>
   </div>
 </section>
