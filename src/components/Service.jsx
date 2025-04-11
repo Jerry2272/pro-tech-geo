@@ -3,6 +3,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { Services } from '../components/util';
 import { useEffect } from 'react';
+import { FiChevronRight } from "react-icons/fi";
+import { FiChevronLeft } from "react-icons/fi";
 
 import 'aos/dist/aos.css';
 import AOS from 'aos';
